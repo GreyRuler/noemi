@@ -65,7 +65,7 @@
     background-color: #f4f7f6;
 
     -webkit-appearance: none;
-    background-image: url("/images/svg/form-arrows.svg");
+    background-image: url("../images/svg/form-arrows.svg");
     background-repeat: no-repeat;
     background-size: 0.7em;
     background-position: right 16px center;
@@ -99,14 +99,14 @@
     height: 25px;
     margin-right: 5px;
     vertical-align: middle;
-    background-image: url("/images/svg/form-empty-circle.svg");
+    background-image: url("../images/svg/form-empty-circle.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 25px;
 }
 
 .radio:checked ~ .popup__radio-group-text::before {
-    background-image: url("/images/svg/form-circle.svg");
+    background-image: url("../images/svg/form-circle.svg");
 }
 
 .radio {
@@ -214,7 +214,7 @@
     background-size: cover;
     background-position: center center;
     z-index: 0;
-    background-image: url("/images/banner-bg.jpg");
+    background-image: url("../images/banner-bg.jpg");
     margin-bottom: 57px;
 }
 
@@ -296,7 +296,7 @@
 
 @media (min-width: 641px) and (max-width: 1199px) {
     .header {
-        background-image: url("/images/banner-bg-tablet.jpg");
+        background-image: url("../images/banner-bg-tablet.jpg");
         padding: 43px 35px;
         margin-bottom: 42px;
     }
@@ -325,7 +325,7 @@
 
 @media (max-width: 640px) {
     .header {
-        background-image: url("/images/banner-mobile.jpg");
+        background-image: url("../images/banner-mobile.jpg");
         margin-bottom: 35px;
         padding: 30px 15px 0px;
     }
@@ -523,16 +523,16 @@
 }
 
 .trend.one {
-    background-image: url("/images/trend1.jpg");
+    background-image: url("../images/trend1.jpg");
 }
 .trend.two {
-    background-image: url("/images/trend2.jpg");
+    background-image: url("../images/trend2.jpg");
 }
 .trend.three {
-    background-image: url("/images/trend3.jpg");
+    background-image: url("../images/trend3.jpg");
 }
 .trend.four {
-    background-image: url("/images/trend4.jpg");
+    background-image: url("../images/trend4.jpg");
 }
 
 .trend__tags-container {
@@ -1229,15 +1229,15 @@
 @media (min-width: 1200px) {
     
     .product__img.one {
-        background-image: url("/images/shop-item-desk1.jpg");
+        background-image: url("../images/shop-item-desk1.jpg");
     }
 
     .product__img.two {
-        background-image: url("/images/shop-item-desk2.jpg");
+        background-image: url("../images/shop-item-desk2.jpg");
     }
 
     .product__img.three {
-        background-image: url("/images/shop-item-desk3.jpg");
+        background-image: url("../images/shop-item-desk3.jpg");
     }
 }
 
@@ -1281,15 +1281,15 @@
     }
 
     .product__img.one {
-        background-image: url("/images/shop-item-tablet1.jpg");
+        background-image: url("../images/shop-item-tablet1.jpg");
     }
 
     .product__img.two {
-        background-image: url("/images/shop-item-tablet2.jpg");
+        background-image: url("../images/shop-item-tablet2.jpg");
     }
 
     .product__img.three {
-        background-image: url("/images/shop-item-tablet3.jpg");
+        background-image: url("../images/shop-item-tablet3.jpg");
     }
 
     .product__body {
@@ -1355,15 +1355,15 @@
     }
 
     .product__img.one {
-        background-image: url("/images/shop-item-mobile1.jpg");
+        background-image: url("../images/shop-item-mobile1.jpg");
     }
 
     .product__img.two {
-        background-image: url("/images/shop-item-mobile2.jpg");
+        background-image: url("../images/shop-item-mobile2.jpg");
     }
 
     .product__img.three {
-        background-image: url("/images/shop-item-mobile3.jpg");
+        background-image: url("../images/shop-item-mobile3.jpg");
     }
 
     .product__body {
