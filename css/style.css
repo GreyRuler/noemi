@@ -12,13 +12,13 @@
     position: fixed;
     background-color: rgba(0,0,0,0.6);
     z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .popup__container {
     max-width: 390px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 240px;
     /* top: calc(50% - 390px / 2);
     left: calc(50% - 390px / 2); */
     background-color: #ffffff;
@@ -95,14 +95,22 @@
 .popup__radio-group-text::before {
     content: "";
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: 18px;
+    height: 18px;
     margin-right: 5px;
     vertical-align: middle;
     background-image: url("../images/svg/form-empty-circle.svg");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 25px;
+    background-size: 18px;
+}
+
+@media (max-width: 1199px) {
+    .popup__radio-group-text::before {
+        width: 26px;
+        height: 26px;
+        background-size: 25px;
+    }
 }
 
 .radio:checked ~ .popup__radio-group-text::before {
@@ -117,6 +125,7 @@
 }
 
 .textarea {
+    width: 100%;
     max-width: 100%;
     max-height: 100px;
     padding: 16px;
@@ -479,6 +488,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    display: flex;
+    align-items: end;
+    justify-content: center;
 }
 
 .trend:not(:last-child) {
@@ -497,15 +510,14 @@
 
 .trend__content {
     width: calc(100% - 38px);
-    bottom: 15px;
-    left: 19px;
     padding: 30px 32px;
     padding-top: 20px;
+    margin-bottom: 15px;
     border: #b59f5b solid 3px;
     display: flex;
     flex-direction: column;
     align-content: end;
-    position: absolute;
+    z-index: 2;
 }
 .trend__preview {
     display: block;
@@ -536,6 +548,8 @@
 }
 
 .trend__tags-container {
+    display: flex;
+    flex-wrap: wrap;
     padding-bottom: 0;
 }
 
@@ -586,7 +600,8 @@
     }
 }
 
-@media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait), (orientation: landscape) and (max-width: 640px) {
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait),
+ (orientation: landscape) and (max-width: 640px), (min-width: 641px) and (max-width: 1199px) {
     /* 2 колонки */
     .container-trends {
         flex-wrap: wrap;
@@ -724,19 +739,13 @@
 
 @media (min-width: 641px) and (max-width: 1199px) {
     .page {
-        max-width: 700px;
-        padding: 50px 0;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .posts {
-        width: 393px;
+        padding: 50px 35px;
     }
 
     .post {
         display: flex;
         flex-direction: column;
+        margin-right: 35px;
     }
 
     .post:not(:last-child) {
@@ -756,6 +765,7 @@
 
     .content {
         margin-left: 0;
+        max-width: 100%;
     }
 
     .content-tag {
@@ -792,7 +802,7 @@
 
     .post {
         flex-direction: column;
-        width: 330px;
+        width: 100%;
     }
 
     .post::after {
@@ -1060,7 +1070,7 @@
 @media (min-width: 320px) and (max-width: 640px) {
 
     .aside {
-        width: 330px;
+        width: 100%;
         padding-top: 6px;
     }
 
@@ -1148,6 +1158,7 @@
 .product {
     display: flex;
     flex-direction: column;
+    
     width: 33.333%;
     box-sizing: border-box;
 }
@@ -1156,12 +1167,8 @@
     margin-right: 111px;
 }
 
-.product__img {
-    max-width: 100%;
-    height: 204px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+picture {
+    align-self: center;
 }
 
 .product__body {
@@ -1226,21 +1233,6 @@
     background-color: #323232;
 }
 
-@media (min-width: 1200px) {
-    
-    .product__img.one {
-        background-image: url("../images/shop-item-desk1.jpg");
-    }
-
-    .product__img.two {
-        background-image: url("../images/shop-item-desk2.jpg");
-    }
-
-    .product__img.three {
-        background-image: url("../images/shop-item-desk3.jpg");
-    }
-}
-
 @media (min-width: 641px) and (max-width: 1199px) {
     .container-products {
         max-width: 1200px;
@@ -1274,22 +1266,6 @@
 
     .product:not(:last-child) {
         margin-right: 0;
-    }
-
-    .product__img {
-        height: 227px;
-    }
-
-    .product__img.one {
-        background-image: url("../images/shop-item-tablet1.jpg");
-    }
-
-    .product__img.two {
-        background-image: url("../images/shop-item-tablet2.jpg");
-    }
-
-    .product__img.three {
-        background-image: url("../images/shop-item-tablet3.jpg");
     }
 
     .product__body {
@@ -1348,22 +1324,6 @@
     .product:not(:last-child) {
         margin-right: 0;
         margin-bottom: 50px;
-    }
-
-    .product__img {
-        height: 284px;
-    }
-
-    .product__img.one {
-        background-image: url("../images/shop-item-mobile1.jpg");
-    }
-
-    .product__img.two {
-        background-image: url("../images/shop-item-mobile2.jpg");
-    }
-
-    .product__img.three {
-        background-image: url("../images/shop-item-mobile3.jpg");
     }
 
     .product__body {
@@ -1469,7 +1429,6 @@
 @media (min-width: 641px) and (max-width: 1199px) {
     .footer {
         padding: 0 35px;
-        max-width: 768px;
     }
 
     .icon-socials {
@@ -1480,7 +1439,6 @@
 @media (min-width: 320px) and (max-width: 640px) {
     .footer {
         padding: 0 35px;
-        max-width: 320px;
     }
     
     .icon-socials {
