@@ -6,6 +6,10 @@
 }
 
 /* Popup */
+.popup.active {
+    display: none;
+}
+
 .popup {
     width: 100%;
     height: 100vh;
@@ -664,6 +668,7 @@
 
 .image {
     max-width: 381px;
+    width: 100%
 }
 
 .content { 
@@ -761,6 +766,7 @@
 
     .image {
         max-width: 393px;
+        width: 100%
     }
 
     .content {
@@ -790,8 +796,7 @@
 @media (min-width: 320px) and (max-width: 640px) {
     .page {
         flex-direction: column;
-        max-width: 330px;
-        padding: 0;
+        padding: 0 15px;
         padding-top: 44px;
         margin-bottom: 30px;
     }
@@ -799,6 +804,11 @@
     /* .posts {
         margin-bottom: 5px;
     } */
+
+    .image {
+        max-width: auto;
+        width: 100%
+    }
 
     .post {
         flex-direction: column;
